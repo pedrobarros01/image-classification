@@ -56,3 +56,12 @@ class FeatureExtractor:
         if image is None:
             image = cv2.imread(path_image, cv2.IMREAD_GRAYSCALE)
         return cv2.calcHist([image], [0], None, [256], [0, 255])
+
+    @classmethod
+    def canny(cls, path_image: str):
+        imagem = cv2.imread(path_image, cv2.IMREAD_GRAYSCALE)
+        bordas = cv2.Canny(imagem, 100, 200)
+        coordenadas_bordas = np.column_stack(np.where(bordas > 0))
+        num_bordas = min(100, coordenadas_bordas.shape[0])
+        vetor_caracteristicas = coordenadas_bordas[:num_bordas].flatten()
+        return vetor_caracteristicas
