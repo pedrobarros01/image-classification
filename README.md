@@ -71,6 +71,5 @@ A seguir são apresentados a formação dos graficos do KNN aplicados em cada al
 ![Grafico](graficos/grafico_canny.png)
 
 ## Video
-![Grafico](graficos/video_visao.mp4)
-
+https://github.com/user-attachments/assets/f4468c0a-d4b3-4b78-a935-84c6ec638720
 
