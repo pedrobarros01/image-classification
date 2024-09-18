@@ -60,3 +60,4 @@ make run
 # Use pre-commit for running checks before committing
 
 [pre-commit](https://pre-commit.com/) is a framework for managing and maintaining multi-language pre-commit hooks. It is a client-side hook manager that can be used to automate checks before committing code. It is recommended to use pre-commit to ensure code formatting, among other things.
+https://www.kaggle.com/datasets/anthonytherrien/dog-vs-cat -. base de dados
