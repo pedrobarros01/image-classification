@@ -1,7 +1,8 @@
 # Descrição do Projeto
 
 Este projeto visa a classificação de imagens de gatos e cachorros usando o algoritmo K-Nearest Neighbors (KNN) e técnicas de extração de características. Abaixo estão descritos os algoritmos escolhidos, como foram implementados e os resultados obtidos.
-
+# Base de dados
+A base de dados utilizada foi a seguinte: https://www.kaggle.com/datasets/anthonytherrien/dog-vs-cat, ela contém figuras de gatos e cachorros feitos por inteligencia artificial.
 # Processos e Algoritmos Utilizados
 
   # 1. Extração de Características
@@ -72,4 +73,5 @@ A seguir são apresentados a formação dos graficos do KNN aplicados em cada al
 
 ## Video
 https://github.com/user-attachments/assets/f4468c0a-d4b3-4b78-a935-84c6ec638720
+
 
