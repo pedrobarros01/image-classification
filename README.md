@@ -1,63 +1,42 @@
-# python-repository-template
+# Descrição do Projeto
 
-A Python repository template to facilitate getting your projects started and organized.
+Este projeto visa a classificação de imagens de gatos e cachorros usando o algoritmo K-Nearest Neighbors (KNN) e técnicas de extração de características. Abaixo estão descritos os algoritmos escolhidos, como foram implementados e os resultados obtidos.
 
-# If you use Windows, use chocolatey for installing things
+# Processos e Algoritmos Utilizados
 
-- [chocolatey installation guide](https://chocolatey.org/install)
+  # 1. Extração de Características
+  A extração de características é uma etapa crucial na classificação de imagens. Usamos a classe FeatureExtractor para extrair diferentes tipos de características das imagens.
+  ## a. Momentos Simples
+  Os Momentos Simples são estatísticas calculadas a partir da imagem em escala de cinza. Incluem:  
+  * Média: A média dos valores dos pixels.
+  * Variância: A medida da dispersão dos valores dos pixels em relação à média.    
+  * Desvio Padrão: A raiz quadrada da variância.
+  * Skewness (Assimetria): Medida da assimetria da distribuição dos pixels.
+  * Curtose: Medida da "altitude" da distribuição dos pixels.    
+  ## b. Momentos Geométricos
+  Os Momentos Geométricos são calculados usando a imagem binarizada e fornecem informações sobre a forma da imagem. Incluem:
+  - Momentos Geométricos: Medidas estatísticas da forma da imagem binarizada.
+  - Momentos Hu: Uma série de invariantes que descrevem a forma da imagem. 
+  ## c. Local Binary Pattern (LBP)
+  LBP é uma técnica de textura que captura padrões locais na imagem.      
+   ## d. Canny Edge Detector
+  O detector de bordas de Canny é usado para detectar bordas na imagem e extrair um vetor de características baseado nas bordas detectadas.
+  
+  
+  
+  # 2. Algoritmo de Classificação
+  K-Nearest Neighbors (KNN)
+  O KNN é um algoritmo de aprendizado supervisionado que classifica uma amostra com base na maioria dos votos de seus vizinhos mais próximos.
 
-# Use pyenv for Python version management
+  - Escolha do Número de Vizinhos: Testamos diferentes valores para n_neighbors e escolhemos o que apresentou a melhor acurácia.
+    
+   A escolha do número de vizinhos no KNN impactou significativamente a performance do modelo. A visualização dos resultados ajudou a entender melhor a distribuição das predições.
 
-- [pyenv installation guide](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation)
+# 3. Visualização dos Resultados
 
-```bash
-curl https://pyenv.run | bash
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
-echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(pyenv init -)"' >> ~/.bashrc
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.profile
-echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.profile
-echo 'eval "$(pyenv init -)"' >> ~/.profile
-exit
-```
+Utilizamos o PCA (Análise de Componentes Principais) para reduzir a dimensionalidade dos dados e visualizá-los em um gráfico 2D, facilitando a análise das predições do modelo.
 
-In another shell:
 
-```bash
-pyenv update
-pyenv install 3.9.13
-pyenv rehash
-pyenv global 3.9.13
-exit
-```
+# Resultados
+A acurácia dos diferentes tipos de características foi comparada, e os resultados foram visualizados em um gráfico de barras.
 
-# Use `make` for simplifing commands and making it explicit how to run your code
-
-- [make documentation](https://www.gnu.org/software/make/manual/make.html)
-
-# Use poetry for managing Python dependencies
-
-[Poetry](https://python-poetry.org/docs/basic-usage/) is a tool for dependency management and packaging in Python. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you. Poetry offers a lockfile to ensure repeatable installs, and can build your project for distribution.
-
-## Basic commands:
-
-- Add new dependency: `poetry add <package>`
-- Install dependencies: `poetry install`
-- Update dependencies: `poetry update`
-- Remove dependencies: `poetry remove <package>`
-- Run a command in the virtual environment: `poetry run <command>`
-- Run python in the virtual environment: `poetry run python <command>`
-
-# Make sure to use the Makefile to facilitate the usage of your repository
-
-Anyone that clones your repository should be able to relatively easily run your code with just a few commands. The Makefile should contain the following commands:
-
-```bash
-make install
-make run
-```
-
-# Use pre-commit for running checks before committing
-
-[pre-commit](https://pre-commit.com/) is a framework for managing and maintaining multi-language pre-commit hooks. It is a client-side hook manager that can be used to automate checks before committing code. It is recommended to use pre-commit to ensure code formatting, among other things.
-https://www.kaggle.com/datasets/anthonytherrien/dog-vs-cat -. base de dados
