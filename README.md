@@ -21,6 +21,8 @@ Este projeto visa a classificação de imagens de gatos e cachorros usando o alg
   LBP é uma técnica de textura que captura padrões locais na imagem.      
    ## d. Canny Edge Detector
   O detector de bordas de Canny é usado para detectar bordas na imagem e extrair um vetor de características baseado nas bordas detectadas.
+  ## e. Histogramas
+  Histogramas são vetores da frequencia da intensidade de cada pixel na imagem
   
   
   
@@ -39,4 +41,36 @@ Utilizamos o PCA (Análise de Componentes Principais) para reduzir a dimensional
 
 # Resultados
 A acurácia dos diferentes tipos de características foi comparada, e os resultados foram visualizados em um gráfico de barras.
+![Grafico](graficos/grafico%20resultado.png)
+
+A seguir são apresentados a formação dos graficos do KNN aplicados em cada algoritmo de classificação
+## Momentos Simples
+![Grafico](graficos/grafico_momento_simples.png)
+
+## Momento Geometrico
+![Grafico](graficos/grafico_momento_geometrico.png)
+
+
+## Momentos HU
+![Grafico](graficos/grafico_momentos_hu.png)
+
+## Histogramas
+### Canal vermelho
+![Grafico](graficos/grafico%20hist%20vermelho.png)
+
+### Canal verde
+![Grafico](graficos/grafico%20hist%20verde.png)
+
+### Canal azul
+![Grafico](graficos/grafico%20hist%20azul.png)
+
+## Local Binary Pattern (LBP)
+![Grafico](graficos/grafico%20lbp.png)
+
+## Canny
+![Grafico](graficos/grafico_canny.png)
+
+## Video
+![Grafico](graficos/video_visao.mp4)
+
 
