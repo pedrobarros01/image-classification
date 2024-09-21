@@ -39,7 +39,17 @@ A base de dados utilizada foi a seguinte: https://www.kaggle.com/datasets/anthon
 
 Utilizamos o PCA (Análise de Componentes Principais) para reduzir a dimensionalidade dos dados e visualizá-los em um gráfico 2D, facilitando a análise das predições do modelo.
 
+# 4. Executar o codigo
+Para executar o codigo siga os seguintes passos:
+1. Acesse o kaggle e crie o token
+2. Adicione o seu `kaggle.json` ao projeto
+3. Execute na pasta images(va ate ela com o cmd) o comando `kaggle datasets download -d anthonytherrien/dog-vs-cat`
+4. Acesse os comandos makes do projeto no makefile
+5. Execute o projeto
 
+`Observacao1: Os comandos sem o knn- sao para extrair somente cararteristicas`
+`Observacao2: Os comandos com o knn- sao para classificar`
+`Observacao1: O comando plot é pra plotar os resultados`
 # Resultados
 A acurácia dos diferentes tipos de características foi comparada, e os resultados foram visualizados em um gráfico de barras.
 ![Grafico](graficos/grafico%20resultado.png)
@@ -71,7 +81,13 @@ A seguir são apresentados a formação dos graficos do KNN aplicados em cada al
 ## Canny
 ![Grafico](graficos/grafico_canny.png)
 
-## Video
-https://github.com/user-attachments/assets/f4468c0a-d4b3-4b78-a935-84c6ec638720
+## Video da Extracao
+
+## Video do KNN
+
+## Video do resultado
+
+
+
 
 

@@ -10,44 +10,73 @@ install: ## Install Python requirements.
 	poetry install --no-root
 	poetry run pre-commit install
 
-.PHONY: run
-run: ## Run the project.
-	poetry run python -m src.app
+.PHONY: plot
+plot: ## Run the project.
+	poetry run python -m src.app --modo "RES"
 
-.PHONY: run-example-script
-run-example-script: ## Run first example script.
-	poetry run python src/scripts/example_xyz.py
+.PHONY: histr
+histr: ## Run the project.
+	poetry run python -m src.app --modo "EC" --tipo "hist_r"
 
-.PHONY: run-env-var-usage-example-script
-run-env-var-example-script: ## Run environment variables usage example script.
-	poetry run python src/scripts/example_env.py
+.PHONY: histg
+histg: ## Run the project.
+	poetry run python -m src.app --modo "EC" --tipo "hist_g"
 
-.PHONY: notebook
-notebook: ## Start Jupyter Notebook.
-	poetry run jupyter notebook --notebook-dir=src/notebooks/ --browser='open %s'
+.PHONY: histb
+histb: ## Run the project.
+	poetry run python -m src.app --modo "EC" --tipo "hist_b"
 
-.PHONY: pre-commit
-pre-commit: ## Run pre-commit checks.
-	poetry run pre-commit run --config ./.pre-commit-config.yaml
+.PHONY: msimples
+msimples: ## Run the project.
+	poetry run python -m src.app --modo "EC" --tipo "msimples"
 
-.PHONY: patch
-patch: ## Bump project version to next patch (bugfix release/chores).
-	poetry version patch
+.PHONY: mgeo
+mgeo: ## Run the project.
+	poetry run python -m src.app --modo "EC" --tipo "mgeo"
 
-.PHONY: minor
-minor: ## Bump project version to next minor (feature release).
-	poetry version minor
+.PHONY: mhu
+mhu: ## Run the project.
+	poetry run python -m src.app --modo "EC" --tipo "mhu"
 
-.PHONY: clean-notebooks
-clean-notebooks: ## Clean Jupyter Notebooks of output data.
-	find . -name '*.ipynb' | xargs -P 6 -n 1 poetry run python -m jupyter nbconvert --clear-output --inplace
+.PHONY: lbp
+lbp: ## Run the project.
+	poetry run python -m src.app --modo "EC" --tipo "lbp"
 
-.PHONY: clean
-clean: ## Clean project's temporary files.
-	find . -wholename '*/.ipynb_checkpoints' -exec rm -rf {} +
-	find . -name '__pycache__' -exec rm -rf {} +
-	find . -name '*.pyc' -exec rm -f {} +
-	find . -name '*.log' -exec rm -f {} +
+.PHONY: canny
+canny: ## Run the project.
+	poetry run python -m src.app --modo "EC" --tipo "canny"
+
+.PHONY: knn-histr
+knn-histr: ## Run the project.
+	poetry run python -m src.app --modo "KNN" --tipo "hist_r"
+
+.PHONY: knn-histg
+knn-histg: ## Run the project.
+	poetry run python -m src.app --modo "KNN" --tipo "hist_g"
+
+.PHONY: knn-histb
+knn-histb: ## Run the project.
+	poetry run python -m src.app --modo "KNN" --tipo "hist_b"
+
+.PHONY: knn-msimples
+knn-msimples: ## Run the project.
+	poetry run python -m src.app --modo "KNN" --tipo "msimples"
+
+.PHONY: knn-mgeo
+knn-mgeo: ## Run the project.
+	poetry run python -m src.app --modo "KNN" --tipo "mgeo"
+
+.PHONY: knn-mhu
+knn-mhu: ## Run the project.
+	poetry run python -m src.app --modo "KNN" --tipo "mhu"
+
+.PHONY: knn-lbp
+knn-lbp: ## Run the project.
+	poetry run python -m src.app --modo "KNN" --tipo "lbp"
+
+.PHONY: knn-canny
+knn-canny: ## Run the project.
+	poetry run python -m src.app --modo "KNN" --tipo "canny"
 
 .DEFAULT_GOAL := help
 help:

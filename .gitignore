@@ -160,3 +160,8 @@ cython_debug/
 #.idea/
 src/images/cat/*
 src/images/dog/*
+kaggle.json
+animal
+animal/dog
+animal/cat
+dog-vs-cat.zip
