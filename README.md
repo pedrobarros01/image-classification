@@ -48,8 +48,11 @@ Para executar o codigo siga os seguintes passos:
 5. Execute o projeto
 
 `Observacao1: Os comandos sem o knn- sao para extrair somente cararteristicas`
+
 `Observacao2: Os comandos com o knn- sao para classificar`
+
 `Observacao1: O comando plot é pra plotar os resultados`
+
 # Resultados
 A acurácia dos diferentes tipos de características foi comparada, e os resultados foram visualizados em um gráfico de barras.
 ![Grafico](graficos/grafico%20resultado.png)
@@ -83,9 +86,28 @@ A seguir são apresentados a formação dos graficos do KNN aplicados em cada al
 
 ## Video da Extracao
 
+https://github.com/user-attachments/assets/dc0569f9-fa6d-4906-b878-05f1ab4b86da
+
 ## Video do KNN
 
+https://github.com/user-attachments/assets/f6021926-e004-4b26-8185-6481e7fd2d32
+
 ## Video do resultado
+
+https://github.com/user-attachments/assets/555e596e-a691-4f3f-b7be-20a374b8a533
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
